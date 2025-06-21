@@ -8,6 +8,7 @@ class Person:
 
 
 def create_person_list(people_data: dict) -> list:
+    Person.people.clear()
     # Шаг 1: создаём все экземпляры Person без связей
     for data in people_data:
         Person(name=data["name"], age=data["age"])
